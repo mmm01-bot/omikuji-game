@@ -1,15 +1,18 @@
-body{
-    background-color:rgb(250, 214, 220);
+body {
+    background-color: rgb(250, 214, 220);
     text-align: center;
     font-family: sans-serif;
     padding: 40px 20px;
 
     min-height: 100vh;
     box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    margin: 0;
 }
 
 button {
@@ -37,8 +40,9 @@ button:hover {
     border-radius: 20px;
     box-shadow: 0 5px 15px #f3b6cc;
     font-weight: bold;
-    display: inline-block;
-    min-width: 300px;
+
+    width: 220px;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -51,6 +55,7 @@ p {
     font-size: 20px;
 }
 
+/* キラキラ演出 */
 @keyframes sparkle {
     0% {
         transform: scale(1);
@@ -72,52 +77,58 @@ p {
     animation: sparkle 0.8s;
 }
 
+/* 運勢の詳細 */
 .fortune-details {
     border: 2px solid pink;
     border-radius: 25px;
     padding: 20px;
-    margin: 30px auto;
+
+    margin: 30px auto 0 auto;
+
     width: 700px;
-    max-width: 90%;
+    max-width: 90vw;
+
     box-sizing: border-box;
+
     background-color: white;
+    box-shadow: 0 5px 15px #f3b6cc;
+
+    display: block;
 }
 
 .fortune-details p {
     padding: 15px 0;
     margin: 0;
+    font-size: 18px;
 }
 
 .fortune-details p:not(:last-child) {
     border-bottom: 2px dotted pink;
 }
 
-@media (max-width: 600px) {
-    .fortune-details {
-        width: 100%;
-        max-width: 100%;
-        padding: 15px;
-    }
-}
-
-/* 運勢の詳細ボックス */
-.fortune-details {
-    width: 700px !important;
-    max-width: 90% !important;
-    box-sizing: border-box;
-    display: block;
-}
-
-/* 中の文章 */
-.fortune-details p {
-    width: 100%;
-    box-sizing: border-box;
-}
-
 /* スマホ */
 @media (max-width: 600px) {
+
+    body {
+        padding: 30px 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    #result {
+        width: 90vw;
+        max-width: 300px;
+    }
+
     .fortune-details {
-        width: 90% !important;
-        max-width: 90% !important;
+        width: 90vw;
+        max-width: 90vw;
+        padding: 15px;
+    }
+
+    .fortune-details p {
+        font-size: 16px;
     }
 }
