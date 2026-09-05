@@ -1,0 +1,83 @@
+body{
+    background-color:rgb(250, 214, 220);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+button {
+    font-size: 20px;
+    padding: 12px 25px;
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid pink;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: pink;
+    transform: scale(1.08);
+    box-shadow: 0 5px 12px #f3b6cc;
+}
+
+#result {
+    font-size: 32px;
+    margin-top: 30px;
+    border: 2px solid pink;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #f3b6cc;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 300px;
+}
+
+h1 {
+    font-size: 40px;
+    color: deeppink;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px #f3b6cc;
+    }
+
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 30px gold;
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px #f3b6cc;
+    }
+}
+
+.sparkle {
+    animation: sparkle 0.8s;
+}
+
+.fortune-details {
+    border: 2px solid pink;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 500px;
+    background-color: white;
+}
+
+.fortune-details p {
+    padding: 15px 0;
+    margin: 0;
+}
+
+.fortune-details p:not(:last-child) {
+    border-bottom: 2px dotted pink;
+}
