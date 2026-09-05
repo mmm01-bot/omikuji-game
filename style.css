@@ -79,6 +79,7 @@ p {
     margin: 30px auto;
     width: 700px;
     max-width: 90%;
+    box-sizing: border-box;
     background-color: white;
 }
 
@@ -89,4 +90,12 @@ p {
 
 .fortune-details p:not(:last-child) {
     border-bottom: 2px dotted pink;
+}
+
+@media (max-width: 600px) {
+    .fortune-details {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
 }
