@@ -99,3 +99,25 @@ p {
         padding: 15px;
     }
 }
+
+/* 運勢の詳細ボックス */
+.fortune-details {
+    width: 700px !important;
+    max-width: 90% !important;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* 中の文章 */
+.fortune-details p {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+    .fortune-details {
+        width: 90% !important;
+        max-width: 90% !important;
+    }
+}
